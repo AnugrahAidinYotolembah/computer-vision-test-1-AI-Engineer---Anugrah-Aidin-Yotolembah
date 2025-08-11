@@ -62,4 +62,53 @@ File model YOLO (.pt) sudah tersedia
 git clone https://github.com/username/nama-repo.git
 cd nama-repo
 ```
+- Install dependensi Python
+```bash
+pip install -r requirements.txt
+```
+4. Setup RTSP Lokal (MediaMTX + OBS)
+   1. Install MediaMTX
+     Unduh dari: https://github.com/bluenviron/mediamtx/releases
+     Jalankan di terminal:
 
+     ```bash
+     ./mediamtx
+     ```
+     Default RTSP server akan berjalan di:
+     ```bash
+     rtsp://localhost:8554/mystream
+     ```
+
+   2. Konfigurasi OBS
+      - Buka OBS → Settings → Stream.
+      - Pilih Custom sebagai service.
+      - Masukkan URL RTSP MediaMTX (misal rtsp://localhost:8554/mystream).
+      - Mulai streaming di OBS.
+
+5. Konfigurasi Program
+   Edit config.py sesuai kebutuhan:
+   ```bash
+     MODEL_PATH = "yolov8n.pt"
+   CONF_THRESH = 0.5
+   TARGET_CLASS = 0  # person
+
+   RTSP_DETECT_EVERY = 2
+   UPLOAD_DETECT_EVERY = 2
+   WEBCAM_DETECT_EVERY = 2
+   FRAME_WIDTH = 640
+   FRAME_HEIGHT = 480
+
+   LOG_RTSP = "log_rtsp.csv"
+   LOG_UPLOAD = "log_upload.csv"
+   LOG_WEBCAM = "log_webcam.csv"
+
+     ```
+
+   
+7. Menjalankan Program
+   Jika menggunakan RTSP Lokal, pastikan MediaMTX dan OBS sudah aktif.
+   Jalankan dashboard:
+
+   ```bash
+     streamlit run dashboard.py
+   ```
