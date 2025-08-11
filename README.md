@@ -66,6 +66,7 @@ cd nama-repo
 ```bash
 pip install -r requirements.txt
 ```
+---
 4. Setup RTSP Lokal (MediaMTX + OBS)
    1. Install MediaMTX
      Unduh dari: https://github.com/bluenviron/mediamtx/releases
@@ -84,6 +85,8 @@ pip install -r requirements.txt
       - Pilih Custom sebagai service.
       - Masukkan URL RTSP MediaMTX (misal rtsp://localhost:8554/mystream).
       - Mulai streaming di OBS.
+
+---
 
 5. Konfigurasi Program
    Edit config.py sesuai kebutuhan:
@@ -104,8 +107,9 @@ pip install -r requirements.txt
 
      ```
 
-   
-7. Menjalankan Program
+---
+
+6. Menjalankan Program
    Jika menggunakan RTSP Lokal, pastikan MediaMTX dan OBS sudah aktif.
    Jalankan dashboard:
 
