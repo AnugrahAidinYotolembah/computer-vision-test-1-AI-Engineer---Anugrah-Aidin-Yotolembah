@@ -1,0 +1,6 @@
+rtsp local :
+rtsp://localhost:8554/live/mystream
+
+rtsp publik :
+rtsp://rtspstream:Y9RQEg9q8hn_esZjbT_Xl@zephyr.rtsp.stream/people
+rtsp://rtspstream:Y9RQEg9q8hn_esZjbT_Xl@zephyr.rtsp.stream/movie
